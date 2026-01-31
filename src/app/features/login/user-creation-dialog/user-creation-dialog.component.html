@@ -1,0 +1,11 @@
+<h2 mat-dialog-title class="text-indigo-600 font-bold">User Not Found</h2>
+<mat-dialog-content>
+    <p class="text-gray-600">This email is not registered. Would you like to create a new account to continue?</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end" class="pb-4 pr-4">
+    <button mat-button (click)="onCancel()" class="text-gray-500">Cancel</button>
+    <button mat-raised-button color="primary" (click)="onConfirm()"
+        class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">
+        Create Account
+    </button>
+</mat-dialog-actions>
