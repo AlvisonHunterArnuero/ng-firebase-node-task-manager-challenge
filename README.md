@@ -28,6 +28,30 @@ Para este proyecto, se han implementado las últimas innovaciones del ecosistema
 *  **Type-Safety:** Compartición de interfaces de modelos entre Frontend y Backend para garantizar integridad de datos.
 ---
 
+### 1. Archivos de Configuración
+El proyecto espera los siguientes archivos en `src/environments/`:
+
+* `environment.ts`: Utilizado para el desarrollo local (apunta al Suite de Emuladores de Firebase).
+* `environment.prod.ts`: Utilizado para despliegues en producción.
+
+### 2. Desarrollo Local (Emulador de Firebase)
+Asegúrate de que tu archivo `environment.ts` se vea así para conectarte a la suite local:
+
+export const environment = {
+  production: false,
+  apiUrl: 'http://127.0.0.1:5001/tu-project-id/us-central1/api',
+  firebase: {
+    apiKey: "TU_API_KEY",
+    authDomain: "TU_AUTH_DOMAIN",
+    projectId: "TU_PROJECT_ID",
+    storageBucket: "TU_STORAGE_BUCKET",
+    messagingSenderId: "TU_SENDER_ID",
+    appId: "TU_APP_ID"
+  }
+};
+
+***
+
 ## 🚦 Ejecución Local (Firebase Emulator Suite)
 
 Para evitar costos de infraestructura innecesarios (Plan Blaze de Firebase), el proyecto está configurado para ejecutarse localmente mediante el **Emulator Suite**. Esto permite una experiencia de desarrollo idéntica a producción sin latencia y con persistencia controlada.

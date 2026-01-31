@@ -1,10 +1,29 @@
-# Compiled JavaScript files
-lib/**/*.js
-lib/**/*.js.map
-
-# TypeScript v1 declaration files
-typings/
-
-# Node.js dependency directory
+# Node dependencies
 node_modules/
-*.local
+
+# Angular build output
+dist/
+.angular/
+
+# Firebase
+.firebase/
+firebase-debug.log
+ui-debug.log
+
+# Environment files
+# Keep the base files, but ignore local overrides
+src/environments/environment.local.ts
+.env
+.env.local
+
+# Ignore local environment overrides
+src/environments/*.local.ts
+
+# IDEs and OS
+.vscode/
+.idea/
+.DS_Store
+
+# Compiled JS from functions (if using Firebase Functions)
+functions/lib/
+functions/node_modules/
