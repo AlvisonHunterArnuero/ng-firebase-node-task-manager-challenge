@@ -7,14 +7,22 @@ admin.initializeApp();
 const db = admin.firestore();
 const app = express();
 
-app.use(cors({origin: "https://atom-ng-challenge.vercel.app", optionsSuccessStatus: 200}));
+app.use(cors({
+  origin: [
+    "https://atom-ng-challenge.vercel.app",
+    "http://localhost:4200",
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+}));
+
 app.use(express.json());
 
 // API Endpoints
 app.get("/users/:email", async (req, res) => {
   const snapshot = await db
     .collection("users")
-    .where("email", "==", req.params.email)
+    .where("email", "==", decodeURIComponent(req.params.email))
     .get();
   if (snapshot.empty) return res.status(404).send();
   return res.json({id: snapshot.docs[0].id, ...snapshot.docs[0].data()});
