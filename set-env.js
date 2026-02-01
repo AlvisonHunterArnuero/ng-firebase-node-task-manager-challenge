@@ -1,23 +1,17 @@
 const fs = require("fs");
 const path = require("path");
 
+const isProd = process.env.NODE_ENV === "production";
 const apiUrl =
   process.env.API_URL ||
   "http://127.0.0.1:5001/atom-fb-task-manager/us-central1/api";
-const isProd = process.env.NODE_ENV === "production";
 
 const envDirectory = path.join(__dirname, "./src/environments");
-
 if (!fs.existsSync(envDirectory)) {
-  fs.mkdirSync(envDirectory);
+  fs.mkdirSync(envDirectory, { recursive: true });
 }
 
-const targetPath = isProd
-  ? path.join(envDirectory, "environment.prod.ts")
-  : path.join(envDirectory, "environment.ts");
-
-const envConfigFile = `
-export const environment = {
+const content = `export const environment = {
   production: ${isProd},
   apiUrl: '${apiUrl}',
   firebase: {
@@ -28,8 +22,9 @@ export const environment = {
     messagingSenderId: "${process.env.FIREBASE_MESSAGING_SENDER_ID || ""}",
     appId: "${process.env.FIREBASE_APP_ID || ""}"
   }
-};
-`;
+};`;
 
-fs.writeFileSync(targetPath, envConfigFile);
-console.log(`✅ Environment file generated at ${targetPath}`);
+fs.writeFileSync(path.join(envDirectory, "environment.ts"), content);
+fs.writeFileSync(path.join(envDirectory, "environment.prod.ts"), content);
+
+console.log(`✅ Environment files generated successfully.`);
