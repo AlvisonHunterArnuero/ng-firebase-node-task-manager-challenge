@@ -90,7 +90,6 @@ app.put("/tasks/:id", async (req, res) => {
     try {
         const { id } = req.params;
         const data = req.body;
-        // Firestore .update() es perfecto para el toggle porque no borra el resto
         await db.collection("tasks").doc(id).update(data);
         res.status(200).send(Object.assign({ id }, req.body));
     }
