@@ -18,6 +18,11 @@ app.use(cors({
 
 app.use(express.json());
 
+app.get("/health", (req, res) => {
+  res.status(200).send("OK");
+});
+
+
 // API Endpoints
 app.get("/users/:email", async (req, res) => {
   const snapshot = await db

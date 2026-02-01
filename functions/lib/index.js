@@ -44,13 +44,23 @@ const cors_1 = __importDefault(require("cors"));
 firebase_admin_1.default.initializeApp();
 const db = firebase_admin_1.default.firestore();
 const app = (0, express_1.default)();
-app.use((0, cors_1.default)({ origin: true }));
+app.use((0, cors_1.default)({
+    origin: [
+        "https://atom-ng-challenge.vercel.app",
+        "http://localhost:4200",
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+}));
 app.use(express_1.default.json());
+app.get("/health", (req, res) => {
+    res.status(200).send("OK");
+});
 // API Endpoints
 app.get("/users/:email", async (req, res) => {
     const snapshot = await db
         .collection("users")
-        .where("email", "==", req.params.email)
+        .where("email", "==", decodeURIComponent(req.params.email))
         .get();
     if (snapshot.empty)
         return res.status(404).send();
