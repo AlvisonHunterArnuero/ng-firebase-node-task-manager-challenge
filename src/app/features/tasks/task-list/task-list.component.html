@@ -40,6 +40,7 @@
                             [class.text-gray-400]="task.completed">
                             {{ task.title }}
                         </h3>
+                        <p class="text-xs text-gray-700 dark:text-slate-400">{{ task.description }}</p>
                         <p class="text-xs text-gray-500 dark:text-gray-400">{{ task.createdAt | date:'short' }}</p>
                     </div>
                 </div>
