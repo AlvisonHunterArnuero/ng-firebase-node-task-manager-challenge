@@ -1,0 +1,347 @@
+[debug] [2026-02-01T06:52:46.952Z] ----------------------------------------------------------------------
+[debug] [2026-02-01T06:52:46.954Z] Command:       /Users/alvisonhunter/.nvm/versions/node/v20.17.0/bin/node /Users/alvisonhunter/.nvm/versions/node/v20.17.0/bin/firebase emulators:start --import=./firebase-data --export-on-exit=./firebase-data
+[debug] [2026-02-01T06:52:46.954Z] CLI Version:   15.5.1
+[debug] [2026-02-01T06:52:46.954Z] Platform:      darwin
+[debug] [2026-02-01T06:52:46.954Z] Node Version:  v20.17.0
+[debug] [2026-02-01T06:52:46.954Z] Time:          Sun Feb 01 2026 00:52:46 GMT-0600 (Central Standard Time)
+[debug] [2026-02-01T06:52:46.954Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-02-01T06:52:47.693Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-01T06:52:47.693Z] > authorizing via signed-in user (alvison@gmail.com)
+[debug] [2026-02-01T06:52:47.815Z] openjdk version "21.0.10" 2026-01-20
+
+[debug] [2026-02-01T06:52:47.815Z] OpenJDK Runtime Environment Homebrew (build 21.0.10)
+OpenJDK 64-Bit Server VM Homebrew (build 21.0.10, mixed mode, sharing)
+
+[debug] [2026-02-01T06:52:47.820Z] Parsed Java major version: 21
+[info] i  emulators: Starting emulators: functions, firestore, hosting, extensions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, firestore, hosting, extensions"}}
+[debug] [2026-02-01T06:52:47.822Z] Checked if tokens are valid: false, expires at: 1769917213490
+[debug] [2026-02-01T06:52:47.822Z] Checked if tokens are valid: false, expires at: 1769917213490
+[debug] [2026-02-01T06:52:47.822Z] > refreshing access token with scopes: []
+[debug] [2026-02-01T06:52:47.823Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-02-01T06:52:47.823Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-01T06:52:48.077Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-02-01T06:52:48.078Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-01T06:52:48.092Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/atom-fb-task-manager [none]
+[debug] [2026-02-01T06:52:48.501Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/atom-fb-task-manager 200
+[debug] [2026-02-01T06:52:48.502Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/atom-fb-task-manager {"projectNumber":"996560987882","projectId":"atom-fb-task-manager","lifecycleState":"ACTIVE","name":"atom-fb-task-manager","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-01-31T07:44:07.164114Z"}
+[debug] [2026-02-01T06:52:48.999Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-02-01T06:52:48.999Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-02-01T06:52:48.999Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-02-01T06:52:48.999Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-02-01T06:52:48.999Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5005}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2026-02-01T06:52:49.003Z] Write emulator hub locator at /var/folders/vg/1xx8fqs154sg6zjd5c2g_vyh0000gn/T/hub-atom-fb-task-manager.json
+[debug] [2026-02-01T06:52:49.007Z] [Extensions] Started Extensions emulator, this is a noop.
+[debug] [2026-02-01T06:52:49.227Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-02-01T06:52:49.227Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-02-01T06:52:49.227Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-02-01T06:52:49.227Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5005}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, auth, database, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mapphosting, auth, database, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2026-02-01T06:52:49.255Z] defaultcredentials: writing to file /Users/alvisonhunter/.config/firebase/alvison_gmail_com_application_default_credentials.json
+[debug] [2026-02-01T06:52:49.257Z] Setting GAC to /Users/alvisonhunter/.config/firebase/alvison_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/alvisonhunter/.config/firebase/alvison_gmail_com_application_default_credentials.json"}}
+[debug] [2026-02-01T06:52:49.258Z] Checked if tokens are valid: true, expires at: 1769932367078
+[debug] [2026-02-01T06:52:49.258Z] Checked if tokens are valid: true, expires at: 1769932367078
+[debug] [2026-02-01T06:52:49.258Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/atom-fb-task-manager/adminSdkConfig [none]
+[debug] [2026-02-01T06:52:49.709Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/atom-fb-task-manager/adminSdkConfig 200
+[debug] [2026-02-01T06:52:49.709Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/atom-fb-task-manager/adminSdkConfig {"projectId":"atom-fb-task-manager","storageBucket":"atom-fb-task-manager.firebasestorage.app"}
+[info] i  firestore: Importing data from /Users/alvisonhunter/Documents/atom-task-manager-challenge/firebase-data/firestore_export/firestore_export.overall_export_metadata {"metadata":{"emulator":{"name":"firestore"},"message":"Importing data from /Users/alvisonhunter/Documents/atom-task-manager-challenge/firebase-data/firestore_export/firestore_export.overall_export_metadata"}}
+[warn] ⚠  firestore: Cloud Firestore Emulator does not support multiple databases yet. {"metadata":{"emulator":{"name":"firestore"},"message":"Cloud Firestore Emulator does not support multiple databases yet."}}
+[warn] ⚠  firestore: Did not find a Cloud Firestore rules file specified in a firebase.json config file. {"metadata":{"emulator":{"name":"firestore"},"message":"Did not find a Cloud Firestore rules file specified in a firebase.json config file."}}
+[warn] ⚠  firestore: The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration. {"metadata":{"emulator":{"name":"firestore"},"message":"The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration."}}
+[debug] [2026-02-01T06:52:49.737Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2026-02-01T06:52:49.737Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2026-02-01T06:52:49.737Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/Users/alvisonhunter/.cache/firebase/emulators/cloud-firestore-emulator-v1.20.2.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","atom-fb-task-manager","--seed_from_export","/Users/alvisonhunter/Documents/atom-task-manager-challenge/firebase-data/firestore_export/firestore_export.overall_export_metadata","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false,"shell":false,"port":8080} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/Users/alvisonhunter/.cache/firebase/emulators/cloud-firestore-emulator-v1.20.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"atom-fb-task-manager\",\"--seed_from_export\",\"/Users/alvisonhunter/Documents/atom-task-manager-challenge/firebase-data/firestore_export/firestore_export.overall_export_metadata\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false,\"port\":8080}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[debug] [2026-02-01T06:52:50.413Z] Feb 01, 2026 12:52:50 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+INFO: Started WebSocket server on ws://127.0.0.1:9150
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Feb 01, 2026 12:52:50 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://127.0.0.1:9150\n"}}
+[debug] [2026-02-01T06:52:50.429Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
+[debug] [2026-02-01T06:52:50.429Z] 127.0.0.1:8080
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
+
+If you are running a Firestore in Datastore Mode project, run:
+
+   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080
+
+Note: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.
+Dev App Server is now running.
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"127.0.0.1:8080\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nIf you are running a Firestore in Datastore Mode project, run:\n\n   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080\n\nNote: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.\nDev App Server is now running.\n\n"}}
+[info] ✔  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[debug] [2026-02-01T06:52:50.554Z] Checked if tokens are valid: true, expires at: 1769932367078
+[debug] [2026-02-01T06:52:50.554Z] Checked if tokens are valid: true, expires at: 1769932367078
+[debug] [2026-02-01T06:52:50.555Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/atom-fb-task-manager/sites 
+[debug] [2026-02-01T06:52:51.299Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/atom-fb-task-manager/sites 200
+[debug] [2026-02-01T06:52:51.299Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/atom-fb-task-manager/sites {"sites":[{"name":"projects/atom-fb-task-manager/sites/atom-fb-task-manager","defaultUrl":"https://atom-fb-task-manager.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2026-02-01T06:52:51.300Z] Checked if tokens are valid: true, expires at: 1769932367078
+[debug] [2026-02-01T06:52:51.300Z] Checked if tokens are valid: true, expires at: 1769932367078
+[debug] [2026-02-01T06:52:51.300Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/atom-fb-task-manager/webApps/-/config [none]
+[debug] [2026-02-01T06:52:51.741Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/atom-fb-task-manager/webApps/-/config 200
+[debug] [2026-02-01T06:52:51.741Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/atom-fb-task-manager/webApps/-/config {"projectId":"atom-fb-task-manager","appId":"1:996560987882:web:980d82fe0292786ac95993","storageBucket":"atom-fb-task-manager.firebasestorage.app","apiKey":"AIzaSyBtSkp04Wq7JPS3NCAt_bUejTa_qSZPOF4","authDomain":"atom-fb-task-manager.firebaseapp.com","messagingSenderId":"996560987882","projectNumber":"996560987882","version":"2"}
+[debug] [2026-02-01T06:52:51.755Z] Checked if tokens are valid: true, expires at: 1769932367078
+[debug] [2026-02-01T06:52:51.756Z] Checked if tokens are valid: true, expires at: 1769932367078
+[debug] [2026-02-01T06:52:51.756Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/atom-fb-task-manager [none]
+[debug] [2026-02-01T06:52:52.052Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/atom-fb-task-manager 200
+[debug] [2026-02-01T06:52:52.053Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/atom-fb-task-manager {"projectId":"atom-fb-task-manager","projectNumber":"996560987882","displayName":"atom-fb-task-manager","name":"projects/atom-fb-task-manager","resources":{"hostingSite":"atom-fb-task-manager"},"state":"ACTIVE","etag":"1_e5953de3-f1f4-4004-94c5-8b3445defa72"}
+[debug] [2026-02-01T06:52:52.056Z] Specified "public" directory "dist/atom-fb-task-manager/browser" does not exist; Deploy to Hosting site "atom-fb-task-manager" may fail or be empty.
+[info] i  hosting[atom-fb-task-manager]: Serving hosting files from: dist/atom-fb-task-manager/browser {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mdist/atom-fb-task-manager/browser\u001b[22m"}}
+[info] ✔  hosting[atom-fb-task-manager]: Local server: http://127.0.0.1:5005 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5005\u001b[22m\u001b[24m"}}
+[debug] [2026-02-01T06:52:52.117Z] [Extensions] Connecting Extensions emulator, this is a noop.
+[info] i  functions: Watching "/Users/alvisonhunter/Documents/atom-task-manager-challenge/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/alvisonhunter/Documents/atom-task-manager-challenge/functions\" for Cloud Functions..."}}
+[debug] [2026-02-01T06:52:52.121Z] Validating nodejs source
+[debug] [2026-02-01T06:52:52.887Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.4.1",
+    "typescript": "^5.7.3"
+  },
+  "private": true
+}
+[debug] [2026-02-01T06:52:52.887Z] Building nodejs source
+[debug] [2026-02-01T06:52:52.887Z] Failed to find version of module node: reached end of search path /Users/alvisonhunter/Documents/atom-task-manager-challenge/functions/node_modules
+[info] ✔  functions: Using node@20 from host. 
+[debug] [2026-02-01T06:52:52.889Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-02-01T06:52:52.894Z] Found firebase-functions binary at '/Users/alvisonhunter/Documents/atom-task-manager-challenge/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8927
+
+[debug] [2026-02-01T06:52:53.281Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-02-01T06:52:58.307Z] defaultcredentials: writing to file /Users/alvisonhunter/.config/firebase/alvison_gmail_com_application_default_credentials.json
+[debug] [2026-02-01T06:52:58.308Z] Setting GAC to /Users/alvisonhunter/.config/firebase/alvison_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/alvisonhunter/.config/firebase/alvison_gmail_com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] ✔  functions[us-central1-api]: http function initialized (http://127.0.0.1:5001/atom-fb-task-manager/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/atom-fb-task-manager/us-central1/api)."}}
+[debug] [2026-02-01T06:52:58.315Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────┬────────────────┬──────────────────────────────────┐
+│ Emulator   │ Host:Port      │ View in Emulator UI              │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Functions  │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions  │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Firestore  │ 127.0.0.1:8080 │ http://127.0.0.1:4000/firestore  │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Hosting    │ 127.0.0.1:5005 │ n/a                              │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Extensions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/extensions │
+└────────────┴────────────────┴──────────────────────────────────┘
+  Emulator Hub host: 127.0.0.1 port: 4400
+  Other reserved ports: 4500, 9150
+┌─────────────────────────┬───────────────┬─────────────────────┐
+│ Extension Instance Name │ Extension Ref │ View in Emulator UI │
+└─────────────────────────┴───────────────┴─────────────────────┘
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2026-02-01T06:53:06.049Z] [work-queue] {"queuedWork":["/atom-fb-task-manager/us-central1/api/tasks/zkimpwFp9sLlz82H9ErC-2026-02-01T06:53:06.049Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-02-01T06:53:06.050Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/atom-fb-task-manager/us-central1/api/tasks/zkimpwFp9sLlz82H9ErC-2026-02-01T06:53:06.049Z"],"workRunningCount":1}
+[debug] [2026-02-01T06:53:06.050Z] Accepted request GET /atom-fb-task-manager/us-central1/api/tasks/zkimpwFp9sLlz82H9ErC --> us-central1-api
+[debug] [2026-02-01T06:53:06.051Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-02-01T06:53:06.052Z] [functions] Got req.url=/atom-fb-task-manager/us-central1/api/tasks/zkimpwFp9sLlz82H9ErC, mapping to path=/tasks/zkimpwFp9sLlz82H9ErC {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/atom-fb-task-manager/us-central1/api/tasks/zkimpwFp9sLlz82H9ErC, mapping to path=/tasks/zkimpwFp9sLlz82H9ErC"}}
+[debug] [2026-02-01T06:53:06.053Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2026-02-01T06:53:06.054Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2026-02-01T06:53:06.547Z] [runtime-status] [48516] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.6.0","resolution":"/Users/alvisonhunter/Documents/atom-task-manager-challenge/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [48516] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"13.6.0\",\"resolution\":\"/Users/alvisonhunter/Documents/atom-task-manager-challenge/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2026-02-01T06:53:06.548Z] [runtime-status] [48516] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.0.5","resolution":"/Users/alvisonhunter/Documents/atom-task-manager-challenge/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [48516] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.0.5\",\"resolution\":\"/Users/alvisonhunter/Documents/atom-task-manager-challenge/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2026-02-01T06:53:06.548Z] [runtime-status] [48516] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [48516] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2026-02-01T06:53:06.548Z] [runtime-status] [48516] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.0.5","resolution":"/Users/alvisonhunter/Documents/atom-task-manager-challenge/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [48516] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.0.5\",\"resolution\":\"/Users/alvisonhunter/Documents/atom-task-manager-challenge/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2026-02-01T06:53:06.548Z] [runtime-status] [48516] Detected firebase-functions v7+, skipping legacy stubs. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [48516] Detected firebase-functions v7+, skipping legacy stubs."}}
+[debug] [2026-02-01T06:53:06.548Z] [runtime-status] [48516] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.6.0","resolution":"/Users/alvisonhunter/Documents/atom-task-manager-challenge/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [48516] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"13.6.0\",\"resolution\":\"/Users/alvisonhunter/Documents/atom-task-manager-challenge/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2026-02-01T06:53:06.583Z] [runtime-status] [48516] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.0.5","resolution":"/Users/alvisonhunter/Documents/atom-task-manager-challenge/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [48516] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.0.5\",\"resolution\":\"/Users/alvisonhunter/Documents/atom-task-manager-challenge/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2026-02-01T06:53:06.705Z] [runtime-status] [48516] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"13.6.0","resolution":"/Users/alvisonhunter/Documents/atom-task-manager-challenge/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [48516] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"13.6.0\",\"resolution\":\"/Users/alvisonhunter/Documents/atom-task-manager-challenge/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2026-02-01T06:53:06.753Z] [runtime-status] [48516] Functions runtime initialized. {"cwd":"/Users/alvisonhunter/Documents/atom-task-manager-challenge/functions","node_version":"20.17.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [48516] Functions runtime initialized. {\"cwd\":\"/Users/alvisonhunter/Documents/atom-task-manager-challenge/functions\",\"node_version\":\"20.17.0\"}"}}
+[debug] [2026-02-01T06:53:06.754Z] [runtime-status] [48516] Listening to port: /var/folders/vg/1xx8fqs154sg6zjd5c2g_vyh0000gn/T/fire_emu_0cc6c92735bec252.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [48516] Listening to port: /var/folders/vg/1xx8fqs154sg6zjd5c2g_vyh0000gn/T/fire_emu_0cc6c92735bec252.sock"}}
+[debug] [2026-02-01T06:53:06.768Z] [worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: IDLE"}}
+[debug] [2026-02-01T06:53:06.768Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2026-02-01T06:53:06.768Z] [worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: BUSY"}}
+[debug] [2026-02-01T06:53:06.923Z] Feb 01, 2026 12:53:06 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Feb 01, 2026 12:53:06 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected HTTP/2 connection.\n"}}
+[debug] [2026-02-01T06:53:07.356Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 587.596291ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 587.596291ms"}}
+[debug] [2026-02-01T06:53:07.356Z] [worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: IDLE"}}
+[debug] [2026-02-01T06:53:07.356Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-02-01T06:53:07.357Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-02-01T06:53:07.357Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-02-01T06:53:18.645Z] [work-queue] {"queuedWork":["/atom-fb-task-manager/us-central1/api/tasks-2026-02-01T06:53:18.644Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-02-01T06:53:18.645Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/atom-fb-task-manager/us-central1/api/tasks-2026-02-01T06:53:18.644Z"],"workRunningCount":1}
+[debug] [2026-02-01T06:53:18.645Z] Accepted request OPTIONS /atom-fb-task-manager/us-central1/api/tasks --> us-central1-api
+[debug] [2026-02-01T06:53:18.648Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-02-01T06:53:18.649Z] [functions] Got req.url=/atom-fb-task-manager/us-central1/api/tasks, mapping to path=/tasks {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/atom-fb-task-manager/us-central1/api/tasks, mapping to path=/tasks"}}
+[debug] [2026-02-01T06:53:18.649Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2026-02-01T06:53:18.650Z] [worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: BUSY"}}
+[debug] [2026-02-01T06:53:18.658Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 8.18ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 8.18ms"}}
+[debug] [2026-02-01T06:53:18.658Z] [worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: IDLE"}}
+[debug] [2026-02-01T06:53:18.658Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-02-01T06:53:18.659Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-02-01T06:53:18.659Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-02-01T06:53:18.659Z] [work-queue] {"queuedWork":["/atom-fb-task-manager/us-central1/api/tasks-2026-02-01T06:53:18.659Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-02-01T06:53:18.660Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/atom-fb-task-manager/us-central1/api/tasks-2026-02-01T06:53:18.659Z"],"workRunningCount":1}
+[debug] [2026-02-01T06:53:18.660Z] Accepted request POST /atom-fb-task-manager/us-central1/api/tasks --> us-central1-api
+[debug] [2026-02-01T06:53:18.662Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-02-01T06:53:18.662Z] [functions] Got req.url=/atom-fb-task-manager/us-central1/api/tasks, mapping to path=/tasks {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/atom-fb-task-manager/us-central1/api/tasks, mapping to path=/tasks"}}
+[debug] [2026-02-01T06:53:18.663Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2026-02-01T06:53:18.663Z] [worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: BUSY"}}
+[debug] [2026-02-01T06:53:18.717Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 53.4425ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 53.4425ms"}}
+[debug] [2026-02-01T06:53:18.717Z] [worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: IDLE"}}
+[debug] [2026-02-01T06:53:18.717Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-02-01T06:53:18.717Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-02-01T06:53:18.717Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-02-01T06:53:24.192Z] [work-queue] {"queuedWork":["/atom-fb-task-manager/us-central1/api/tasks/jB1JARISCMPoC6QNEBHy-2026-02-01T06:53:24.192Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-02-01T06:53:24.193Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/atom-fb-task-manager/us-central1/api/tasks/jB1JARISCMPoC6QNEBHy-2026-02-01T06:53:24.192Z"],"workRunningCount":1}
+[debug] [2026-02-01T06:53:24.193Z] Accepted request OPTIONS /atom-fb-task-manager/us-central1/api/tasks/jB1JARISCMPoC6QNEBHy --> us-central1-api
+[debug] [2026-02-01T06:53:24.198Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-02-01T06:53:24.198Z] [functions] Got req.url=/atom-fb-task-manager/us-central1/api/tasks/jB1JARISCMPoC6QNEBHy, mapping to path=/tasks/jB1JARISCMPoC6QNEBHy {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/atom-fb-task-manager/us-central1/api/tasks/jB1JARISCMPoC6QNEBHy, mapping to path=/tasks/jB1JARISCMPoC6QNEBHy"}}
+[debug] [2026-02-01T06:53:24.199Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2026-02-01T06:53:24.200Z] [worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: BUSY"}}
+[debug] [2026-02-01T06:53:24.207Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 7.275375ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 7.275375ms"}}
+[debug] [2026-02-01T06:53:24.207Z] [worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: IDLE"}}
+[debug] [2026-02-01T06:53:24.207Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-02-01T06:53:24.207Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-02-01T06:53:24.207Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-02-01T06:53:24.209Z] [work-queue] {"queuedWork":["/atom-fb-task-manager/us-central1/api/tasks/jB1JARISCMPoC6QNEBHy-2026-02-01T06:53:24.209Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-02-01T06:53:24.209Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/atom-fb-task-manager/us-central1/api/tasks/jB1JARISCMPoC6QNEBHy-2026-02-01T06:53:24.209Z"],"workRunningCount":1}
+[debug] [2026-02-01T06:53:24.209Z] Accepted request DELETE /atom-fb-task-manager/us-central1/api/tasks/jB1JARISCMPoC6QNEBHy --> us-central1-api
+[debug] [2026-02-01T06:53:24.212Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-02-01T06:53:24.213Z] [functions] Got req.url=/atom-fb-task-manager/us-central1/api/tasks/jB1JARISCMPoC6QNEBHy, mapping to path=/tasks/jB1JARISCMPoC6QNEBHy {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/atom-fb-task-manager/us-central1/api/tasks/jB1JARISCMPoC6QNEBHy, mapping to path=/tasks/jB1JARISCMPoC6QNEBHy"}}
+[debug] [2026-02-01T06:53:24.213Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2026-02-01T06:53:24.213Z] [worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: BUSY"}}
+[debug] [2026-02-01T06:53:24.235Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 21.96275ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 21.96275ms"}}
+[debug] [2026-02-01T06:53:24.235Z] [worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: IDLE"}}
+[debug] [2026-02-01T06:53:24.235Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-02-01T06:53:24.235Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-02-01T06:53:24.235Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-02-01T06:53:26.464Z] [work-queue] {"queuedWork":["/atom-fb-task-manager/us-central1/api/tasks/zkimpwFp9sLlz82H9ErC-2026-02-01T06:53:26.463Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-02-01T06:53:26.464Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/atom-fb-task-manager/us-central1/api/tasks/zkimpwFp9sLlz82H9ErC-2026-02-01T06:53:26.463Z"],"workRunningCount":1}
+[debug] [2026-02-01T06:53:26.464Z] Accepted request GET /atom-fb-task-manager/us-central1/api/tasks/zkimpwFp9sLlz82H9ErC --> us-central1-api
+[debug] [2026-02-01T06:53:26.465Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-02-01T06:53:26.465Z] [functions] Got req.url=/atom-fb-task-manager/us-central1/api/tasks/zkimpwFp9sLlz82H9ErC, mapping to path=/tasks/zkimpwFp9sLlz82H9ErC {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/atom-fb-task-manager/us-central1/api/tasks/zkimpwFp9sLlz82H9ErC, mapping to path=/tasks/zkimpwFp9sLlz82H9ErC"}}
+[debug] [2026-02-01T06:53:26.465Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2026-02-01T06:53:26.465Z] [worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: BUSY"}}
+[debug] [2026-02-01T06:53:26.489Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 23.994333ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 23.994333ms"}}
+[debug] [2026-02-01T06:53:26.490Z] [worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: IDLE"}}
+[debug] [2026-02-01T06:53:26.490Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-02-01T06:53:26.490Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-02-01T06:53:26.490Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-02-01T06:53:42.097Z] [work-queue] {"queuedWork":["/atom-fb-task-manager/us-central1/api/users/nanito@catarina.com-2026-02-01T06:53:42.097Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-02-01T06:53:42.099Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/atom-fb-task-manager/us-central1/api/users/nanito@catarina.com-2026-02-01T06:53:42.097Z"],"workRunningCount":1}
+[debug] [2026-02-01T06:53:42.102Z] Accepted request GET /atom-fb-task-manager/us-central1/api/users/nanito@catarina.com --> us-central1-api
+[debug] [2026-02-01T06:53:42.110Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-02-01T06:53:42.111Z] [functions] Got req.url=/atom-fb-task-manager/us-central1/api/users/nanito@catarina.com, mapping to path=/users/nanito@catarina.com {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/atom-fb-task-manager/us-central1/api/users/nanito@catarina.com, mapping to path=/users/nanito@catarina.com"}}
+[debug] [2026-02-01T06:53:42.111Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2026-02-01T06:53:42.112Z] [worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: BUSY"}}
+[debug] [2026-02-01T06:53:42.141Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 29.752541ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 29.752541ms"}}
+[debug] [2026-02-01T06:53:42.142Z] [worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: IDLE"}}
+[debug] [2026-02-01T06:53:42.142Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-02-01T06:53:42.142Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-02-01T06:53:42.142Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-02-01T06:53:43.803Z] [work-queue] {"queuedWork":["/atom-fb-task-manager/us-central1/api/users-2026-02-01T06:53:43.803Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-02-01T06:53:43.803Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/atom-fb-task-manager/us-central1/api/users-2026-02-01T06:53:43.803Z"],"workRunningCount":1}
+[debug] [2026-02-01T06:53:43.804Z] Accepted request OPTIONS /atom-fb-task-manager/us-central1/api/users --> us-central1-api
+[debug] [2026-02-01T06:53:43.804Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-02-01T06:53:43.805Z] [functions] Got req.url=/atom-fb-task-manager/us-central1/api/users, mapping to path=/users {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/atom-fb-task-manager/us-central1/api/users, mapping to path=/users"}}
+[debug] [2026-02-01T06:53:43.805Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2026-02-01T06:53:43.805Z] [worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: BUSY"}}
+[debug] [2026-02-01T06:53:43.809Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 3.817959ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 3.817959ms"}}
+[debug] [2026-02-01T06:53:43.809Z] [worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: IDLE"}}
+[debug] [2026-02-01T06:53:43.810Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-02-01T06:53:43.810Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-02-01T06:53:43.810Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-02-01T06:53:43.811Z] [work-queue] {"queuedWork":["/atom-fb-task-manager/us-central1/api/users-2026-02-01T06:53:43.810Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-02-01T06:53:43.811Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/atom-fb-task-manager/us-central1/api/users-2026-02-01T06:53:43.810Z"],"workRunningCount":1}
+[debug] [2026-02-01T06:53:43.811Z] Accepted request POST /atom-fb-task-manager/us-central1/api/users --> us-central1-api
+[debug] [2026-02-01T06:53:43.814Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-02-01T06:53:43.814Z] [functions] Got req.url=/atom-fb-task-manager/us-central1/api/users, mapping to path=/users {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/atom-fb-task-manager/us-central1/api/users, mapping to path=/users"}}
+[debug] [2026-02-01T06:53:43.814Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2026-02-01T06:53:43.815Z] [worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: BUSY"}}
+[debug] [2026-02-01T06:53:43.829Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 14.248083ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 14.248083ms"}}
+[debug] [2026-02-01T06:53:43.829Z] [worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: IDLE"}}
+[debug] [2026-02-01T06:53:43.829Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-02-01T06:53:43.830Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-02-01T06:53:43.830Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-02-01T06:53:43.866Z] [work-queue] {"queuedWork":["/atom-fb-task-manager/us-central1/api/tasks/OG91ZnIh4B2iiIUEBBH2-2026-02-01T06:53:43.864Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-02-01T06:53:43.866Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/atom-fb-task-manager/us-central1/api/tasks/OG91ZnIh4B2iiIUEBBH2-2026-02-01T06:53:43.864Z"],"workRunningCount":1}
+[debug] [2026-02-01T06:53:43.866Z] Accepted request GET /atom-fb-task-manager/us-central1/api/tasks/OG91ZnIh4B2iiIUEBBH2 --> us-central1-api
+[debug] [2026-02-01T06:53:43.869Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-02-01T06:53:43.869Z] [functions] Got req.url=/atom-fb-task-manager/us-central1/api/tasks/OG91ZnIh4B2iiIUEBBH2, mapping to path=/tasks/OG91ZnIh4B2iiIUEBBH2 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/atom-fb-task-manager/us-central1/api/tasks/OG91ZnIh4B2iiIUEBBH2, mapping to path=/tasks/OG91ZnIh4B2iiIUEBBH2"}}
+[debug] [2026-02-01T06:53:43.869Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2026-02-01T06:53:43.870Z] [worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: BUSY"}}
+[debug] [2026-02-01T06:53:43.879Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 9.411833ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 9.411833ms"}}
+[debug] [2026-02-01T06:53:43.880Z] [worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: IDLE"}}
+[debug] [2026-02-01T06:53:43.880Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-02-01T06:53:43.880Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-02-01T06:53:43.880Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-02-01T06:53:58.686Z] [work-queue] {"queuedWork":["/atom-fb-task-manager/us-central1/api/tasks-2026-02-01T06:53:58.685Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-02-01T06:53:58.688Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/atom-fb-task-manager/us-central1/api/tasks-2026-02-01T06:53:58.685Z"],"workRunningCount":1}
+[debug] [2026-02-01T06:53:58.688Z] Accepted request OPTIONS /atom-fb-task-manager/us-central1/api/tasks --> us-central1-api
+[debug] [2026-02-01T06:53:58.710Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-02-01T06:53:58.712Z] [functions] Got req.url=/atom-fb-task-manager/us-central1/api/tasks, mapping to path=/tasks {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/atom-fb-task-manager/us-central1/api/tasks, mapping to path=/tasks"}}
+[debug] [2026-02-01T06:53:58.712Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2026-02-01T06:53:58.714Z] [worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: BUSY"}}
+[debug] [2026-02-01T06:53:58.719Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 5.156084ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 5.156084ms"}}
+[debug] [2026-02-01T06:53:58.719Z] [worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: IDLE"}}
+[debug] [2026-02-01T06:53:58.719Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-02-01T06:53:58.719Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-02-01T06:53:58.719Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-02-01T06:53:58.720Z] [work-queue] {"queuedWork":["/atom-fb-task-manager/us-central1/api/tasks-2026-02-01T06:53:58.720Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-02-01T06:53:58.720Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/atom-fb-task-manager/us-central1/api/tasks-2026-02-01T06:53:58.720Z"],"workRunningCount":1}
+[debug] [2026-02-01T06:53:58.720Z] Accepted request POST /atom-fb-task-manager/us-central1/api/tasks --> us-central1-api
+[debug] [2026-02-01T06:53:58.721Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-02-01T06:53:58.721Z] [functions] Got req.url=/atom-fb-task-manager/us-central1/api/tasks, mapping to path=/tasks {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/atom-fb-task-manager/us-central1/api/tasks, mapping to path=/tasks"}}
+[debug] [2026-02-01T06:53:58.721Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2026-02-01T06:53:58.721Z] [worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: BUSY"}}
+[debug] [2026-02-01T06:53:58.732Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 10.912708ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 10.912708ms"}}
+[debug] [2026-02-01T06:53:58.733Z] [worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-71d01574-703e-4a96-bdfc-5f806170b638]: IDLE"}}
+[debug] [2026-02-01T06:53:58.733Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-02-01T06:53:58.733Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-02-01T06:53:58.733Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
