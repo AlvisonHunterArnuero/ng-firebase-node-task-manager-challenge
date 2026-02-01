@@ -14,3 +14,11 @@ Dev App Server is now running.
 
 Feb 01, 2026 12:53:06 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
 INFO: Detected HTTP/2 connection.
+Feb 01, 2026 1:50:40 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Feb 01, 2026 1:50:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Feb 01, 2026 1:50:41 AM com.google.cloud.datastore.emulator.impl.firestore.CloudFirestoreV1 exportData
+INFO: Exporting emulator data to firebase-export-17699322408787T4H86/firestore_export
+*** shutting down gRPC server since JVM is shutting down
+*** server shut down
