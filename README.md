@@ -88,6 +88,9 @@ _(Esto iniciará Firestore, Functions y Hosting en puertos locales)._
 ng serve
 ```
 
+### NOTA:
+**Configuración de Entornos:** Este proyecto utiliza un script de pre-build (set-env.js) para gestionar las variables de entorno de forma segura. Los archivos src/environments/ están ignorados en el repositorio para seguir las mejores prácticas de seguridad. Las variables se inyectan dinámicamente durante el despliegue en Vercel.
+
 ---
 
 ## Persistencia de Datos de Prueba
