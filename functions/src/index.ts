@@ -16,6 +16,8 @@ app.use(cors({
   allowedHeaders: ["Content-Type", "Authorization"],
 }));
 
+app.options("*", cors());
+
 app.use(express.json());
 
 app.get("/health", (req, res) => {
@@ -30,12 +32,12 @@ app.get("/users/:email", async (req, res) => {
     .where("email", "==", decodeURIComponent(req.params.email))
     .get();
   if (snapshot.empty) return res.status(404).send();
-  return res.json({id: snapshot.docs[0].id, ...snapshot.docs[0].data()});
+  return res.json({ id: snapshot.docs[0].id, ...snapshot.docs[0].data() });
 });
 
 app.post("/users", async (req, res) => {
   try {
-    const {email} = req.body;
+    const { email } = req.body;
     if (!email) return res.status(400).send("Email is required");
 
     const newUser = {
@@ -43,7 +45,7 @@ app.post("/users", async (req, res) => {
       createdAt: new Date().toISOString(),
     };
     const doc = await db.collection("users").add(newUser);
-    return res.status(201).json({id: doc.id, ...newUser});
+    return res.status(201).json({ id: doc.id, ...newUser });
   } catch (error) {
     console.error("Error creating user:", error);
     return res.status(500).send(error);
@@ -56,7 +58,7 @@ app.get("/tasks/:userId", async (req, res) => {
     .where("userId", "==", req.params.userId)
     .orderBy("createdAt", "desc")
     .get();
-  res.json(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})));
+  res.json(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
 });
 
 app.post("/tasks", async (req, res) => {
@@ -66,17 +68,17 @@ app.post("/tasks", async (req, res) => {
     completed: false,
   };
   const doc = await db.collection("tasks").add(task);
-  res.status(201).json({id: doc.id, ...task});
+  res.status(201).json({ id: doc.id, ...task });
 });
 
 app.put("/tasks/:id", async (req, res) => {
   try {
-    const {id} = req.params;
+    const { id } = req.params;
     const data = req.body;
     await db.collection("tasks").doc(id).update(data);
-    res.status(200).send({id, ...req.body});
+    res.status(200).send({ id, ...req.body });
   } catch (error) {
-    res.status(500).send({message: "Error al actualizar", error});
+    res.status(500).send({ message: "Error on updating this task", error });
   }
 });
 
