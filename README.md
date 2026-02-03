@@ -4,7 +4,21 @@ Esta es una solución robusta y moderna para el desafío técnico de FullStack D
 
 ---
 
-## 🏗️ Arquitectura y Decisiones Técnicas (Senior Level)
+## Nota Importante sobre el Demo en Vivo
+
+La aplicación desplegada en Vercel presenta actualmente un **error de CORS** al intentar comunicarse con las Firebase Cloud Functions. Este es el URL: https://atom-ng-challenge.vercel.app/login
+
+**Razón:** Firebase requiere el **plan Blaze (pago por uso)** para desplegar y actualizar Cloud Functions. Aunque el código en este repositorio implementa correctamente el middleware `cors`, actualmente estoy utilizando el **plan Spark (gratuito)**, lo que impide desplegar estas actualizaciones de configuración al entorno de producción.
+
+**Cómo verificar la funcionalidad:**
+
+-   **Código del Backend:** Por favor, revise el archivo `functions/src/index.ts` para verificar la implementación técnica.
+
+-   **Pruebas Locales:** Ejecute el comando `npm run emulators` para observar el flujo completo de la API y el CRUD funcionando perfectamente en la suite de emuladores locales de Firebase.
+
+---
+
+## Arquitectura y Decisiones Técnicas (Senior Level)
 
 Para este proyecto, se han implementado las últimas innovaciones del ecosistema de desarrollo:
 
