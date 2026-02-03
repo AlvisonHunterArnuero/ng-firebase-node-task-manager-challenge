@@ -52,6 +52,7 @@ app.use((0, cors_1.default)({
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
 }));
+app.options("*", (0, cors_1.default)());
 app.use(express_1.default.json());
 app.get("/health", (req, res) => {
     res.status(200).send("OK");
@@ -104,7 +105,7 @@ app.put("/tasks/:id", async (req, res) => {
         res.status(200).send(Object.assign({ id }, req.body));
     }
     catch (error) {
-        res.status(500).send({ message: "Error al actualizar", error });
+        res.status(500).send({ message: "Error on updating this task", error });
     }
 });
 app.delete("/tasks/:id", async (req, res) => {

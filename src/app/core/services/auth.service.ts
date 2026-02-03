@@ -1,7 +1,8 @@
 import { Injectable, signal, inject, effect } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { environment } from '../../../environments/environment';
-import { tap } from 'rxjs/operators';
+import { tap, catchError, throwError } from 'rxjs';
 
 export interface User {
   id: string;
@@ -12,6 +13,8 @@ export interface User {
 @Injectable({ providedIn: 'root' })
 export class AuthService {
   private http = inject(HttpClient);
+  private snackBar = inject(MatSnackBar);
+
   private readonly apiUrl = environment.apiUrl;
   private readonly STORAGE_KEY = 'atom_task_user';
 
@@ -33,16 +36,58 @@ export class AuthService {
     return storedUser ? JSON.parse(storedUser) : null;
   }
 
+  private showWarning(message?: string) {
+    this.snackBar.open(
+      message ??
+      'Cloud Functions require Firebase Blaze Plan. Please test functionality locally.',
+      'Dismiss',
+      {
+        duration: 8000,
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+        panelClass: ['warning-snackbar'],
+      }
+    );
+  }
+
   checkUser(email: string) {
     return this.http
       .get<User>(`${this.apiUrl}/users/${email}`)
-      .pipe(tap((user) => this.currentUser.set(user)));
+      .pipe(
+        tap(user => this.currentUser.set(user)),
+        catchError((error: HttpErrorResponse) => {
+          if (error.status === 404) {
+            return throwError(() => error);
+          }
+
+          if (error.status === 403) {
+            this.showWarning();
+          } else {
+            this.showWarning('Unexpected error while checking user.');
+          }
+
+          return throwError(() => error);
+        })
+      );
   }
 
   register(email: string) {
     return this.http
       .post<User>(`${this.apiUrl}/users`, { email })
-      .pipe(tap((user) => this.currentUser.set(user)));
+      .pipe(
+        tap(user => this.currentUser.set(user)),
+        catchError((error: HttpErrorResponse) => {
+          if (error.status === 403) {
+            this.showWarning();
+          } else if (error.status === 409) {
+            this.showWarning('Email already registered.');
+          } else {
+            this.showWarning('Registration failed.');
+          }
+
+          return throwError(() => error);
+        })
+      );
   }
 
   logout() {

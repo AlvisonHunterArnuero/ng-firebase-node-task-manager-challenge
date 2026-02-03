@@ -16,3 +16,9 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
     @apply bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 transition-colors duration-300;
 }
+
+.warning-snackbar {
+    background-color: #ff9800;
+    color: #000;
+    font-weight: 600;
+}
