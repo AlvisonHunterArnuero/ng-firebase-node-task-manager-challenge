@@ -36,58 +36,52 @@ export class AuthService {
     return storedUser ? JSON.parse(storedUser) : null;
   }
 
+  private disclaimerBlazePlan = `Cloud Functions require Firebase Blaze Plan. Please test Auth functionality locally.`;
   private showWarning(message?: string) {
-    this.snackBar.open(
-      message ??
-      'Cloud Functions require Firebase Blaze Plan. Please test functionality locally.',
-      'Dismiss',
-      {
-        duration: 8000,
-        horizontalPosition: 'center',
-        verticalPosition: 'bottom',
-        panelClass: ['warning-snackbar'],
-      }
-    );
+    this.snackBar.open(message ?? this.disclaimerBlazePlan, 'Dismiss', {
+      duration: 9000,
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom',
+      panelClass: ['warning-snackbar'],
+    });
   }
 
   checkUser(email: string) {
-    return this.http
-      .get<User>(`${this.apiUrl}/users/${email}`)
-      .pipe(
-        tap(user => this.currentUser.set(user)),
-        catchError((error: HttpErrorResponse) => {
-          if (error.status === 404) {
-            return throwError(() => error);
-          }
-
-          if (error.status === 403) {
-            this.showWarning();
-          } else {
-            this.showWarning('Unexpected error while checking user.');
-          }
-
+    return this.http.get<User>(`${this.apiUrl}/users/${email}`).pipe(
+      tap((user) => this.currentUser.set(user)),
+      catchError((error: HttpErrorResponse) => {
+        if (error.status === 404) {
           return throwError(() => error);
-        })
-      );
+        }
+
+        if (error.status === 403) {
+          this.showWarning();
+        } else {
+          this.showWarning('Unexpected error while checking user.');
+        }
+
+        return throwError(() => error);
+      }),
+    );
   }
 
   register(email: string) {
-    return this.http
-      .post<User>(`${this.apiUrl}/users`, { email })
-      .pipe(
-        tap(user => this.currentUser.set(user)),
-        catchError((error: HttpErrorResponse) => {
-          if (error.status === 403) {
-            this.showWarning();
-          } else if (error.status === 409) {
-            this.showWarning('Email already registered.');
-          } else {
-            this.showWarning('Registration failed.');
-          }
+    return this.http.post<User>(`${this.apiUrl}/users`, { email }).pipe(
+      tap((user) => this.currentUser.set(user)),
+      catchError((error: HttpErrorResponse) => {
+        if (error.status === 403) {
+          this.showWarning();
+        } else if (error.status === 409) {
+          this.showWarning('Email already registered.');
+        } else {
+          this.showWarning(
+            `Registration failed. ${this.disclaimerBlazePlan}`,
+          );
+        }
 
-          return throwError(() => error);
-        })
-      );
+        return throwError(() => error);
+      }),
+    );
   }
 
   logout() {
