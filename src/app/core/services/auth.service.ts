@@ -3,6 +3,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { environment } from '../../../environments/environment';
 import { tap, catchError, throwError } from 'rxjs';
+import { CustomSnackbarComponent } from '../../features/notification/custom-snackbar.component';
 
 export interface User {
   id: string;
@@ -36,10 +37,21 @@ export class AuthService {
     return storedUser ? JSON.parse(storedUser) : null;
   }
 
-  private disclaimerBlazePlan = `Cloud Functions require Firebase Blaze Plan. Please test Auth functionality locally.`;
-  private showWarning(message?: string) {
-    this.snackBar.open(message ?? this.disclaimerBlazePlan, 'Dismiss', {
-      duration: 9000,
+  private titleFirebasePlanLimitation = 'Firebase Plan Limitation (Demo)';
+  private disclaimerBlazePlan = `
+This demo is running on Firebase’s Spark (free) plan.
+Cloud Functions are fully implemented but require the Blaze plan to execute in a live environment.
+To review the complete authentication flow, please run the Firebase Emulators locally.
+The paid plan upgrade was intentionally avoided for this technical challenge.
+    `;
+
+  private showPlanWarning(title?: string, message?: string, duration = 10000) {
+    this.snackBar.openFromComponent(CustomSnackbarComponent, {
+      data: {
+        title: title || this.titleFirebasePlanLimitation,
+        message: message || this.disclaimerBlazePlan.trim(),
+      },
+      duration: duration,
       horizontalPosition: 'center',
       verticalPosition: 'bottom',
       panelClass: ['warning-snackbar'],
@@ -55,11 +67,13 @@ export class AuthService {
         }
 
         if (error.status === 403) {
-          this.showWarning();
+          this.showPlanWarning(
+            this.titleFirebasePlanLimitation,
+            this.disclaimerBlazePlan.trim(),
+          );
         } else {
-          this.showWarning('Unexpected error while checking user.');
+          this.showPlanWarning('Unexpected error while checking user.');
         }
-
         return throwError(() => error);
       }),
     );
@@ -70,13 +84,14 @@ export class AuthService {
       tap((user) => this.currentUser.set(user)),
       catchError((error: HttpErrorResponse) => {
         if (error.status === 403) {
-          this.showWarning();
-        } else if (error.status === 409) {
-          this.showWarning('Email already registered.');
-        } else {
-          this.showWarning(
-            `Registration failed. ${this.disclaimerBlazePlan}`,
+          this.showPlanWarning(
+            this.titleFirebasePlanLimitation,
+            this.disclaimerBlazePlan.trim(),
           );
+        } else if (error.status === 409) {
+          this.showPlanWarning('Email already registered.');
+        } else {
+          this.showPlanWarning(`Registration failed.`);
         }
 
         return throwError(() => error);
